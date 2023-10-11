@@ -10,7 +10,7 @@ class DepartmentController extends Controller
 {
     public function index()
     {
-        $departments = Department::select('id', 'name')->get();
+        $departments = Department::select('id', 'name', 'dept_code')->get();
         return view('backend.pages.department.index', compact('departments'));
     }
 

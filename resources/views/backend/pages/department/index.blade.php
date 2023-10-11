@@ -30,11 +30,12 @@
                             <tr class="text-center">
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $department->dept_code }}</td>
+
                                 <td>{{ $department->name }}</td>
                                 <td>
-                                    <a href="{{ route('department.show', $department->id) }}" class="btn btn-info btn-sm">
+                                    {{-- <a href="{{ route('department.show', $department->id) }}" class="btn btn-info btn-sm">
                                         <i class="bx bx-user"></i>
-                                    </a>
+                                    </a> --}}
 
                                     <a class="btn btn-secondary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#deptEditModal{{ $department->id }}">
