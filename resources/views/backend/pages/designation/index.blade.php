@@ -61,7 +61,7 @@
                                                 </div>
                                                 <div class="modal-body text-start">
                                                     <form class="row g-3"
-                                                        action="{{ route('role.update', $designation->id) }}"
+                                                        action="{{ route('designation.update', $designation->id) }}"
                                                         method="POST">
                                                         @csrf
                                                         @method('PUT')

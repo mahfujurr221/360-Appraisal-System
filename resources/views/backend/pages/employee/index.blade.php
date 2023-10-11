@@ -156,7 +156,7 @@
                                                         <div class="col-md-6">
                                                             <label for="designation" class="form-label">Designation</label>
                                                             <select name="designation_id" class="form-select" required>
-                                                                <option value="" disabled selected>Select Department
+                                                                <option value="" disabled selected>Select Designation
                                                                 </option>
                                                                 @foreach ($designations as $designation)
                                                                     <option value="{{ $designation->id }}"
@@ -250,7 +250,7 @@
                             <div class="col-md-6">
                                 <label for="designation" class="form-label">Designation</label>
                                 <select name="designation_id" class="form-select" required>
-                                    <option value="" disabled selected>Select Department
+                                    <option value="" disabled selected>Select Designation
                                     </option>
                                     @foreach ($designations as $designation)
                                         <option value="{{ $designation->id }}">
