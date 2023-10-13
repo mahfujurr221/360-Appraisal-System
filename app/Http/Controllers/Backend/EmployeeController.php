@@ -67,6 +67,7 @@ class EmployeeController extends Controller
             $employee = Employee::where('id', $id)->first();
             $user = User::where('id', $employee->user_id)->first();
             $user->name = $request->name;
+            $employee->email = $request->email;
             $user->phone = $request->phone;
             $user->dept_id = $request->dept_id;
             $user->role_id = $request->role_id;
@@ -75,6 +76,7 @@ class EmployeeController extends Controller
             if ($user) {
                 $employee->name = $request->name;
                 $employee->phone = $request->phone;
+                $employee->email = $request->email;
                 $employee->dept_id = $request->dept_id;
                 $employee->designation_id = $request->designation_id;
                 $employee->save();
