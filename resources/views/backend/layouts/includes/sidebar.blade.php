@@ -62,6 +62,17 @@
                     <div class="menu-title">Designation</div>
                 </a>
             </li>
+
+            <hr>
+
+            <li>
+                <a href="{{ route('reset') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-arrow-to-right'></i>
+                    </div>
+                    <div class="menu-title">Reset</div>
+                </a>
+            </li>
         @endif
 
     </ul>
