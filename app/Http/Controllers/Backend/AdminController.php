@@ -8,6 +8,8 @@ use App\Models\Designation;
 use App\Models\Roles;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {

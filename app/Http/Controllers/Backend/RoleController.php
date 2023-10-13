@@ -40,5 +40,6 @@ class RoleController extends Controller
         $role = Roles::find($id);
         $role->delete();
         toastr()->success('Role deleted successfully');
+        return back();
     }
 }
