@@ -20,7 +20,7 @@
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
-        @if (auth()->user()->role_id == 1)
+        @if (auth()->user()->role_id == 1 || auth()->user()->role_id == 2)
             <li>
                 <a href="{{ route('admin.index') }}">
                     <div class="parent-icon">
@@ -60,6 +60,14 @@
                         <i class='bx bx-arrow-to-right'></i>
                     </div>
                     <div class="menu-title">Designation</div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('survey-question.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-question-mark'></i>
+                    </div>
+                    <div class="menu-title">Survey Question</div>
                 </a>
             </li>
 
