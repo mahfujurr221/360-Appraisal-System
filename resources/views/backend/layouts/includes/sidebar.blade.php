@@ -70,6 +70,15 @@
                     <div class="menu-title">Survey Question</div>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('survey-setup.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-arrow-to-right'></i>
+                    </div>
+                    <div class="menu-title">Survey Setup</div>
+                </a>
+            </li>
+
 
             <hr>
 

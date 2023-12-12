@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DepartmentsTableSeeder::class);
         $this->call(DesignationsTableSeeder::class);
         $this->call(SurveyQuestionsTableSeeder::class);
+        $this->call(SurveySetupsTableSeeder::class);
     }
 }
