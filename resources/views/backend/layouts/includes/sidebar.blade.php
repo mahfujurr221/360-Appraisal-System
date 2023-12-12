@@ -90,6 +90,22 @@
                     <div class="menu-title">Reset</div>
                 </a>
             </li>
+        @elseif(auth()->user()->role_id == 3)
+            @php
+                //active survey setup
+                $activeSurveySetup = App\Models\SurveySetup::where('status', 'active')->first();
+            @endphp
+            {{-- if active survey setup is not null --}}
+            @if ($activeSurveySetup != null)
+                <li>
+                    <a href="{{ route('survey.start') }}">
+                        <div class="parent-icon">
+                            <i class='bx bx-question-mark'></i>
+                        </div>
+                        <div class="menu-title">Join a Survey</div>
+                    </a>
+                </li>
+            @endif
         @endif
 
     </ul>
