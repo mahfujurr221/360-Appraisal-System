@@ -27,7 +27,6 @@ class SurveySetupController extends Controller
         $surveySetup->title = $request->title;
         $surveySetup->description = $request->description;
         $surveySetup->questions = json_encode($request->survey_question_id);
-        $surveySetup->status = $request->status;
         $surveySetup->save();
         toastr()->success('Survey Question Deleted Successfully');
         return redirect('survey-setup');
@@ -51,6 +50,15 @@ class SurveySetupController extends Controller
         $surveySetup->title = $request->title;
         $surveySetup->description = $request->description;
         $surveySetup->questions = json_encode($request->survey_question_id);
+        if ($request->status == 'active') {
+            //check if any other survey is active
+            $activeSurvey = SurveySetup::where('status', 'active')->first();
+            if ($activeSurvey) {
+                toastr()->warning('A survey is already active. Please deactivate that first.');
+                $activeSurvey->save();
+                return redirect('survey-setup');
+            }
+        }
         $surveySetup->status = $request->status;
         $surveySetup->save();
         toastr()->success('Survey Question Updated Successfully');

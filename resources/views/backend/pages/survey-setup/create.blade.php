@@ -17,24 +17,14 @@
         <div class="card-body">
             <form class="row g-3" action="{{ route('survey-setup.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <label for="input25" class="form-label">Survey Name</label>
                     <div class="input-group">
                         <span class="input-group-text">
                             <i class="bx bx-edit-alt"></i>
                         </span>
-                        <input type="text" class="form-control" id="input25" name="title" placeholder="Survey Name" required>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="input25" class="form-label">Survey Status</label>
-                    <div class="input-group">
-                        <select name="status" id="input25" class="form-select" required>
-                            <option selected disabled>Select Status</option>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                            <option value="completed">Completed</option>
-                        </select>
+                        <input type="text" class="form-control" id="input25" name="title" placeholder="Survey Name"
+                            required>
                     </div>
                 </div>
                 <div class="col-md-111">
