@@ -20,6 +20,7 @@ return array(
     'App\\Http\\Controllers\\Backend\\EmployeeController' => $baseDir . '/app/Http/Controllers/Backend/EmployeeController.php',
     'App\\Http\\Controllers\\Backend\\MaintenanceController' => $baseDir . '/app/Http/Controllers/Backend/MaintenanceController.php',
     'App\\Http\\Controllers\\Backend\\RoleController' => $baseDir . '/app/Http/Controllers/Backend/RoleController.php',
+    'App\\Http\\Controllers\\Backend\\SurveyController' => $baseDir . '/app/Http/Controllers/Backend/SurveyController.php',
     'App\\Http\\Controllers\\Backend\\SurveyQuestionController' => $baseDir . '/app/Http/Controllers/Backend/SurveyQuestionController.php',
     'App\\Http\\Controllers\\Backend\\SurveySetupController' => $baseDir . '/app/Http/Controllers/Backend/SurveySetupController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',

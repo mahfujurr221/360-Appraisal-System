@@ -43,6 +43,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     //survey
     Route::get('survey-start', [SurveyController::class, 'surveyStart'])->name('survey.start');
     Route::get('survey-questions/{id}', [SurveyController::class, 'surveyQuestions'])->name('survey.questions');
+    Route::post('survey-submit', [SurveyController::class, 'surveySubmit'])->name('survey.submit');
 
     //other routes
     Route::get('reset', [MaintenanceController::class, 'reset'])->name('reset');
