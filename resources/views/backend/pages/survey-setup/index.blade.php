@@ -29,7 +29,7 @@
                     </thead>
                     <tbody>
                         @foreach ($surveySetups as $key => $surveySetup)
-                            <tr class="align-middle text-center">
+                            <tr class="text-center align-middle">
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $surveySetup->title }}</td>
                                 @php
@@ -40,7 +40,7 @@
                                         @php
                                             $question = App\Models\SurveyQuestion::find($question);
                                         @endphp
-                                        <span class="badge bg-primary">{{ $question->question }}</span>
+                                        <span class="badge bg-primary">{{ $question->question?? '' }}</span>
                                     @endforeach
                                 </td>
                                 <td>{{ $surveySetup->description }}</td>
