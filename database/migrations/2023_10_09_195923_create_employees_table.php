@@ -24,7 +24,7 @@ return new class extends Migration
             //designation_id
             $table->integer('designation_id');
             //status
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             //survey_setup_status
             $table->integer('survey_setup_status')->default(0);
             $table->timestamps();

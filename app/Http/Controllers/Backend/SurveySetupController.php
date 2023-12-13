@@ -50,7 +50,7 @@ class SurveySetupController extends Controller
         $surveySetup->title = $request->title;
         $surveySetup->description = $request->description;
         $surveySetup->questions = json_encode($request->survey_question_id);
-        if ($request->status == 'active') {
+        if ($request->status == 'active' && $surveySetup->status != 'active') {
             //check if any other survey is active
             $activeSurvey = SurveySetup::where('status', 'active')->first();
             if ($activeSurvey) {
