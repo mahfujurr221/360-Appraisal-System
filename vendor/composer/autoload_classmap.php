@@ -238,6 +238,7 @@ return array(
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'Database\\Seeders\\DepartmentsTableSeeder' => $baseDir . '/database/seeders/DepartmentsTableSeeder.php',
     'Database\\Seeders\\DesignationsTableSeeder' => $baseDir . '/database/seeders/DesignationsTableSeeder.php',
+    'Database\\Seeders\\EmployeesTableSeeder' => $baseDir . '/database/seeders/EmployeesTableSeeder.php',
     'Database\\Seeders\\RolesTableSeeder' => $baseDir . '/database/seeders/RolesTableSeeder.php',
     'Database\\Seeders\\SurveyQuestionsTableSeeder' => $baseDir . '/database/seeders/SurveyQuestionsTableSeeder.php',
     'Database\\Seeders\\SurveyResponseDetailsTableSeeder' => $baseDir . '/database/seeders/SurveyResponseDetailsTableSeeder.php',

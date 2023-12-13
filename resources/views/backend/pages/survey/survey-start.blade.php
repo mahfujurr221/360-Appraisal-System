@@ -16,8 +16,8 @@
                             <div class="card radius-15">
                                 <div class="card-body text-center">
                                     <div class="p-4 border radius-15">
-                                        <img src="assets/images/avatars/avatar-1.png" width="110" height="110"
-                                            class="rounded-circle shadow" alt="">
+                                        <img src="{{ asset('assets/images/users') }}/{{ $employee->image }}"
+                                            width="110" height="110" class="rounded-circle shadow" alt="">
                                         <h5 class="mb-0 mt-5">{{ $employee->name }}</h5>
                                         <p class="mb-3">{{ $employee->designation->name }}</p>
                                         <div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;"

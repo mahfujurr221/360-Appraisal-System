@@ -29,11 +29,9 @@
             <div class="px-3 user-box dropdown">
                 <a class="gap-3 d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret"
                     href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    @if (Auth::user()->image != null && file_exists(public_path('uploads/' . Auth::user()->image)))
-                        <img src="{{ asset('uploads') }}/{{ Auth::user()->image }}" class="user-img" alt="user avatar">
-                    @else
-                        <img src="{{ asset('uploads') }}/default.png" class="user-img" alt="user avatar">
-                    @endif
+                    <img src="{{ asset('assets/images/users') }}/{{ Auth::user()->image }}" class="user-img"
+                        alt="{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}">
+
                     <div class="user-info">
                         <p class="mb-0 user-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>
                         <p class="mb-0 designattion">{{ Auth::user()->user_type }}</p>

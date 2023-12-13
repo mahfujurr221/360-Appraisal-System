@@ -30,6 +30,7 @@ class User extends Authenticatable
         'password',
         'role_id',
         'dept_id',
+        'address',  
     ];
 
     /**
@@ -59,7 +60,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $appends = [
-        'profile_photo_url',
+        'image',
     ];
 
     public function role()
