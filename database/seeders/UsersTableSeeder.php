@@ -6,7 +6,6 @@ use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
-
     /**
      * Auto generated seed file
      *
@@ -14,8 +13,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
-
         \DB::table('users')->delete();
         
         \DB::table('users')->insert(array (
@@ -39,6 +36,7 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2023-08-13 19:51:36',
                 'updated_at' => '2023-08-13 21:46:25',
             ),
+            
             1 => 
             array (
                 'id' => 2,
@@ -59,8 +57,6 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2023-12-12 14:50:49',
                 'updated_at' => '2023-12-12 14:50:49',
             ),
-        ));
-        
-        
+        ));     
     }
 }
