@@ -15,4 +15,14 @@ class SurveyResponse extends Model
     {
         return $this->hasMany(SurveyResponseDetails::class);
     }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function surveySetup()
+    {
+        return $this->belongsTo(SurveySetup::class);
+    }
 }

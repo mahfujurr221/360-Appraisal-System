@@ -40,6 +40,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     //survey setup
     Route::resource('survey-setup', SurveySetupController::class);
 
+    //survey report 
+    Route::get('survey-report', [SurveyController::class, 'surveyReport'])->name('survey-report.index');
+    Route::get('survey-report-details/{id}', [SurveyController::class, 'surveyReportDetails'])->name('survey-report.details');
+
     //survey
     Route::get('survey-start', [SurveyController::class, 'surveyStart'])->name('survey.start');
     Route::get('survey-questions/{id}', [SurveyController::class, 'surveyQuestions'])->name('survey.questions');

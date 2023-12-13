@@ -72,4 +72,38 @@ class SurveyController extends Controller
         toastr()->success('Survey Submitted Successfully');
         return redirect()->route('survey.start');
     }
+
+    public function surveyReport(Request $request)
+    {
+        // return response()->json($request->all());
+        if ($request->employee_id && $request->survey_setup_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+                ->where('employee_id', $request->employee_id)
+                ->where('survey_setup_id', $request->survey_setup_id)
+                ->orderBy('points', 'desc')
+                ->get();
+        } elseif ($request->employee_id && !$request->survey_setup_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+                ->where('employee_id', $request->employee_id)
+                ->orderBy('points', 'desc')
+                ->get();
+        } elseif (!$request->employee_id && $request->survey_setup_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+                ->where('survey_setup_id', $request->survey_setup_id)
+                ->orderBy('points', 'desc')
+                ->get();
+        } else {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+                ->orderBy('points', 'desc')
+                ->get();
+        }
+        return view('backend.pages.survey.survey-report', compact('surveyResponses'));
+    }
+
+    public function surveyReportDetails(string $id)
+    {
+        $surveyResponse = SurveyResponse::with('employee', 'surveySetup', 'surveyResponseDetails.surveyQuestion')->find($id);
+        // return response()->json($surveyResponse);       
+        return view('backend.pages.survey.survey-report-details', compact('surveyResponse'));
+    }
 }

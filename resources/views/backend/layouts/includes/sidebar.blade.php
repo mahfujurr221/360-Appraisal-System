@@ -78,6 +78,14 @@
                     <div class="menu-title">Survey Setup</div>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('survey-report.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-arrow-to-right'></i>
+                    </div>
+                    <div class="menu-title">Survey Report</div>
+                </a>
+            </li>
 
 
             <hr>
