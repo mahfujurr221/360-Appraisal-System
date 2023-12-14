@@ -20,7 +20,7 @@
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
-        @if (auth()->user()->role_id == 1)
+        @if (auth()->user()->role_id == 1 || auth()->user()->role_id == 2)
             <li>
                 <a href="{{ route('admin.index') }}">
                     <div class="parent-icon">
@@ -62,6 +62,31 @@
                     <div class="menu-title">Designation</div>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('survey-question.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-question-mark'></i>
+                    </div>
+                    <div class="menu-title">Survey Question</div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('survey-setup.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-arrow-to-right'></i>
+                    </div>
+                    <div class="menu-title">Survey Setup</div>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('survey-report.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-arrow-to-right'></i>
+                    </div>
+                    <div class="menu-title">Survey Report</div>
+                </a>
+            </li>
+
 
             <hr>
 
@@ -73,6 +98,22 @@
                     <div class="menu-title">Reset</div>
                 </a>
             </li>
+        @elseif(auth()->user()->role_id == 3)
+            @php
+                //active survey setup
+                $activeSurveySetup = App\Models\SurveySetup::where('status', 'active')->first();
+            @endphp
+            {{-- if active survey setup is not null --}}
+            @if ($activeSurveySetup != null)
+                <li>
+                    <a href="{{ route('survey.start') }}">
+                        <div class="parent-icon">
+                            <i class='bx bx-question-mark'></i>
+                        </div>
+                        <div class="menu-title">Join a Survey</div>
+                    </a>
+                </li>
+            @endif
         @endif
 
     </ul>

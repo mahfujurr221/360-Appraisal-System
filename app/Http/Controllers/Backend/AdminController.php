@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Department;
 use App\Models\Designation;
+use App\Models\Employee;
 use App\Models\Roles;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -85,6 +86,7 @@ class AdminController extends Controller
     //profile update
     public function profileUpdate(Request $request, $id)
     {
+        // dd($request->all());
         $user = User::find($id);
         $request->validate([
             'name' => 'required|unique:users,name,' . $id,
@@ -93,6 +95,23 @@ class AdminController extends Controller
             'address' => 'required',
         ]);
         $user->update($request->all());
+        if ($request->hasFile('image')) {
+            //remove old image
+            if (file_exists(public_path('assets/images/users/' . $user->image)) && $user->image != 'avatar.jpg') {
+                @unlink(public_path('assets/images/users/' . $user->image));
+            }
+            $image = $request->file('image');
+            $name = time() . '-' . rand(0, 9999999) . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('assets/images/users');
+            $image->move($destinationPath, $name);
+            $user->image = $name;
+            $employe = Employee::where('user_id', $id)->first();
+            if ($employe) {
+                $employe->image = $name;
+                $employe->save();
+            }
+        }
+        $user->save();
         toastr()->success('Profile updated successfully');
         return back();
     }

@@ -7,6 +7,9 @@ use App\Http\Controllers\Backend\DesignationController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\MaintenanceController;
+use App\Http\Controllers\Backend\SurveyController;
+use App\Http\Controllers\Backend\SurveyQuestionController;
+use App\Http\Controllers\Backend\SurveySetupController;
 
 Route::get('/', function () {
     // return login page 
@@ -30,6 +33,21 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('designation', DesignationController::class);
     //employee
     Route::resource('employee', EmployeeController::class);
+
+    //survey question
+    Route::resource('survey-question', SurveyQuestionController::class);
+
+    //survey setup
+    Route::resource('survey-setup', SurveySetupController::class);
+
+    //survey report 
+    Route::get('survey-report', [SurveyController::class, 'surveyReport'])->name('survey-report.index');
+    Route::get('survey-report-details/{id}', [SurveyController::class, 'surveyReportDetails'])->name('survey-report.details');
+
+    //survey
+    Route::get('survey-start', [SurveyController::class, 'surveyStart'])->name('survey.start');
+    Route::get('survey-questions/{id}', [SurveyController::class, 'surveyQuestions'])->name('survey.questions');
+    Route::post('survey-submit', [SurveyController::class, 'surveySubmit'])->name('survey.submit');
 
     //other routes
     Route::get('reset', [MaintenanceController::class, 'reset'])->name('reset');

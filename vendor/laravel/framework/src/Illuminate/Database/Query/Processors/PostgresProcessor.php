@@ -46,6 +46,57 @@ class PostgresProcessor extends Processor
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Process the results of a types query.
+     *
+     * @param  array  $results
+     * @return array
+     */
+    public function processTypes($results)
+    {
+        return array_map(function ($result) {
+            $result = (object) $result;
+
+            return [
+                'name' => $result->name,
+                'schema' => $result->schema,
+                'implicit' => (bool) $result->implicit,
+                'type' => match (strtolower($result->type)) {
+                    'b' => 'base',
+                    'c' => 'composite',
+                    'd' => 'domain',
+                    'e' => 'enum',
+                    'p' => 'pseudo',
+                    'r' => 'range',
+                    'm' => 'multirange',
+                    default => null,
+                },
+                'category' => match (strtolower($result->category)) {
+                    'a' => 'array',
+                    'b' => 'boolean',
+                    'c' => 'composite',
+                    'd' => 'date_time',
+                    'e' => 'enum',
+                    'g' => 'geometric',
+                    'i' => 'network_address',
+                    'n' => 'numeric',
+                    'p' => 'pseudo',
+                    'r' => 'range',
+                    's' => 'string',
+                    't' => 'timespan',
+                    'u' => 'user_defined',
+                    'v' => 'bit_string',
+                    'x' => 'unknown',
+                    'z' => 'internal_use',
+                    default => null,
+                },
+            ];
+        }, $results);
+    }
+
+    /**
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
      * Process the results of a columns query.
      *
      * @param  array  $results
@@ -70,4 +121,65 @@ class PostgresProcessor extends Processor
             ];
         }, $results);
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Process the results of an indexes query.
+     *
+     * @param  array  $results
+     * @return array
+     */
+    public function processIndexes($results)
+    {
+        return array_map(function ($result) {
+            $result = (object) $result;
+
+            return [
+                'name' => strtolower($result->name),
+                'columns' => explode(',', $result->columns),
+                'type' => strtolower($result->type),
+                'unique' => (bool) $result->unique,
+                'primary' => (bool) $result->primary,
+            ];
+        }, $results);
+    }
+
+    /**
+     * Process the results of a foreign keys query.
+     *
+     * @param  array  $results
+     * @return array
+     */
+    public function processForeignKeys($results)
+    {
+        return array_map(function ($result) {
+            $result = (object) $result;
+
+            return [
+                'name' => $result->name,
+                'columns' => explode(',', $result->columns),
+                'foreign_schema' => $result->foreign_schema,
+                'foreign_table' => $result->foreign_table,
+                'foreign_columns' => explode(',', $result->foreign_columns),
+                'on_update' => match (strtolower($result->on_update)) {
+                    'a' => 'no action',
+                    'r' => 'restrict',
+                    'c' => 'cascade',
+                    'n' => 'set null',
+                    'd' => 'set default',
+                    default => null,
+                },
+                'on_delete' => match (strtolower($result->on_delete)) {
+                    'a' => 'no action',
+                    'r' => 'restrict',
+                    'c' => 'cascade',
+                    'n' => 'set null',
+                    'd' => 'set default',
+                    default => null,
+                },
+            ];
+        }, $results);
+    }
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
 }

@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="text-center d-flex flex-column align-items-center">
-                                <img src="assets/images/avatars/avatar-.png" alt="Admin"
+                                <img src="{{ asset('assets/images/users') }}/{{ Auth::user()->image }}" alt="Admin"
                                     class="p-1 rounded-circle bg-primary" width="110">
                                 <div class="mt-3">
                                     <h4>{{ $admin->name }}</h4>
@@ -80,6 +80,14 @@
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" class="form-control" name="address"
                                             value="{{ $admin->address }}" />
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Image</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input type="file" class="form-control" name="image" />
                                     </div>
                                 </div>
                                 <div class="row">

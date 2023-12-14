@@ -23,6 +23,7 @@ use Illuminate\Support\Stringable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use JsonSerializable;
+use OutOfBoundsException;
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\RequestInterface;
 use RuntimeException;
@@ -1007,7 +1008,11 @@ class PendingRequest
                     $this->dispatchResponseReceivedEvent($response);
                 });
             })
+<<<<<<< HEAD
             ->otherwise(function (TransferException $e) {
+=======
+            ->otherwise(function (OutOfBoundsException|TransferException $e) {
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 if ($e instanceof ConnectException) {
                     $this->dispatchConnectionFailedEvent();
                 }

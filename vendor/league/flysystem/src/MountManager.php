@@ -31,6 +31,21 @@ class MountManager implements FilesystemOperator
     {
         $this->mountFilesystems($filesystems);
         $this->config = new Config($config);
+<<<<<<< HEAD
+=======
+    }
+
+    /**
+     * @param array<string,FilesystemOperator> $filesystems
+     */
+    public function extend(array $filesystems, array $config = []): MountManager
+    {
+        $clone = clone $this;
+        $clone->config = $this->config->extend($config);
+        $clone->mountFilesystems($filesystems);
+
+        return $clone;
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
     }
 
     public function fileExists(string $location): bool
@@ -329,7 +344,7 @@ class MountManager implements FilesystemOperator
     /**
      * @param string $path
      *
-     * @return array{0:FilesystemOperator, 1:string}
+     * @return array{0:FilesystemOperator, 1:string, 2:string}
      */
     private function determineFilesystemAndPath(string $path): array
     {
@@ -373,8 +388,13 @@ class MountManager implements FilesystemOperator
         array $config,
     ): void {
         $config = $this->config->extend($config);
+<<<<<<< HEAD
         $retainVisibility = (bool) $config->get('retain_visibility', true);
         $visibility = $config->get('visibility');
+=======
+        $retainVisibility = (bool) $config->get(Config::OPTION_RETAIN_VISIBILITY, true);
+        $visibility = $config->get(Config::OPTION_VISIBILITY);
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
 
         try {
             if ($visibility == null && $retainVisibility) {
@@ -382,7 +402,11 @@ class MountManager implements FilesystemOperator
             }
 
             $stream = $sourceFilesystem->readStream($sourcePath);
+<<<<<<< HEAD
             $destinationFilesystem->writeStream($destinationPath, $stream, $visibility ? compact('visibility') : []);
+=======
+            $destinationFilesystem->writeStream($destinationPath, $stream, $visibility ? compact(Config::OPTION_VISIBILITY) : []);
+>>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
         } catch (UnableToRetrieveMetadata | UnableToReadFile | UnableToWriteFile $exception) {
             throw UnableToCopyFile::fromLocationTo($source, $destination, $exception);
         }

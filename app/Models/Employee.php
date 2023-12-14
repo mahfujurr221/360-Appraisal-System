@@ -13,6 +13,11 @@ class Employee extends Model
     {
         return $this->belongsTo(Department::class, 'dept_id', 'id');
     }
+    //join with designation table
+    public function designation()
+    {
+        return $this->belongsTo(Designation::class);
+    }
     //join with user table
     public function user()
     {
