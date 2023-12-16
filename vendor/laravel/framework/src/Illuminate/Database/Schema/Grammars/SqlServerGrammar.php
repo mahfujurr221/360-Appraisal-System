@@ -168,8 +168,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Compile the query to determine the indexes.
      *
      * @param  string  $table
@@ -221,7 +219,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint

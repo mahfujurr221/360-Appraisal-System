@@ -1583,19 +1583,6 @@
         },
         {
             "name": "laravel/fortify",
-<<<<<<< HEAD
-            "version": "v1.18.1",
-            "version_normalized": "1.18.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/fortify.git",
-                "reference": "a3aaf020ac76cd546658517126ddd58d1627d3d0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/a3aaf020ac76cd546658517126ddd58d1627d3d0",
-                "reference": "a3aaf020ac76cd546658517126ddd58d1627d3d0",
-=======
             "version": "v1.19.1",
             "version_normalized": "1.19.1.0",
             "source": {
@@ -1607,7 +1594,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/fortify/zipball/1dde858a520f679b4a2f453fa68f8a0e98751875",
                 "reference": "1dde858a520f679b4a2f453fa68f8a0e98751875",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -1623,11 +1609,7 @@
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.3"
             },
-<<<<<<< HEAD
-            "time": "2023-10-18T14:10:08+00:00",
-=======
             "time": "2023-12-11T16:16:45+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1668,31 +1650,17 @@
         },
         {
             "name": "laravel/framework",
-<<<<<<< HEAD
-            "version": "v10.31.0",
-            "version_normalized": "10.31.0.0",
+            "version": "v10.37.3",
+            "version_normalized": "10.37.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "507ce9b28bce4b5e4140c28943092ca38e9a52e4"
+                "reference": "996375dd61f8c6e4ac262b57ed485655d71fcbdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/507ce9b28bce4b5e4140c28943092ca38e9a52e4",
-                "reference": "507ce9b28bce4b5e4140c28943092ca38e9a52e4",
-=======
-            "version": "v10.37.2",
-            "version_normalized": "10.37.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "d97b5263ccd2f3950fd93f45b1b957259d76d0db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d97b5263ccd2f3950fd93f45b1b957259d76d0db",
-                "reference": "d97b5263ccd2f3950fd93f45b1b957259d76d0db",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
+                "url": "https://api.github.com/repos/laravel/framework/zipball/996375dd61f8c6e4ac262b57ed485655d71fcbdc",
+                "reference": "996375dd61f8c6e4ac262b57ed485655d71fcbdc",
                 "shasum": ""
             },
             "require": {
@@ -1725,11 +1693,7 @@
                 "symfony/console": "^6.2",
                 "symfony/error-handler": "^6.2",
                 "symfony/finder": "^6.2",
-<<<<<<< HEAD
-                "symfony/http-foundation": "^6.3",
-=======
                 "symfony/http-foundation": "^6.4",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "symfony/http-kernel": "^6.2",
                 "symfony/mailer": "^6.2",
                 "symfony/mime": "^6.2",
@@ -1797,11 +1761,7 @@
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
                 "nyholm/psr7": "^1.2",
-<<<<<<< HEAD
-                "orchestra/testbench-core": "^8.12",
-=======
                 "orchestra/testbench-core": "^8.15.1",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpstan": "^1.4.7",
                 "phpunit/phpunit": "^10.0.7",
@@ -1847,11 +1807,7 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
             },
-<<<<<<< HEAD
-            "time": "2023-11-07T13:48:30+00:00",
-=======
-            "time": "2023-12-13T14:12:36+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
+            "time": "2023-12-13T20:10:58+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1971,19 +1927,6 @@
         },
         {
             "name": "laravel/pint",
-<<<<<<< HEAD
-            "version": "v1.13.6",
-            "version_normalized": "1.13.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/pint.git",
-                "reference": "3e3d2ab01c7d8b484c18e6100ecf53639c744fa7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/3e3d2ab01c7d8b484c18e6100ecf53639c744fa7",
-                "reference": "3e3d2ab01c7d8b484c18e6100ecf53639c744fa7",
-=======
             "version": "v1.13.7",
             "version_normalized": "1.13.7.0",
             "source": {
@@ -1995,7 +1938,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/4157768980dbd977f1c4b4cc94997416d8b30ece",
                 "reference": "4157768980dbd977f1c4b4cc94997416d8b30ece",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -2014,11 +1956,7 @@
                 "nunomaduro/termwind": "^1.15.1",
                 "pestphp/pest": "^2.24.2"
             },
-<<<<<<< HEAD
-            "time": "2023-11-07T17:59:57+00:00",
-=======
             "time": "2023-12-05T19:43:12+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "bin": [
                 "builds/pint"
             ],
@@ -2118,19 +2056,6 @@
         },
         {
             "name": "laravel/sail",
-<<<<<<< HEAD
-            "version": "v1.26.0",
-            "version_normalized": "1.26.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/sail.git",
-                "reference": "c60fe037004e272efd0d81f416ed2bfc623d70b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/c60fe037004e272efd0d81f416ed2bfc623d70b4",
-                "reference": "c60fe037004e272efd0d81f416ed2bfc623d70b4",
-=======
             "version": "v1.26.3",
             "version_normalized": "1.26.3.0",
             "source": {
@@ -2142,7 +2067,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/fa1ad5fbb03686dfc752bfd1861d86091cc1c32d",
                 "reference": "fa1ad5fbb03686dfc752bfd1861d86091cc1c32d",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -2156,11 +2080,7 @@
                 "orchestra/testbench": "^7.0|^8.0|^9.0",
                 "phpstan/phpstan": "^1.10"
             },
-<<<<<<< HEAD
-            "time": "2023-10-18T13:57:15+00:00",
-=======
             "time": "2023-12-02T18:26:39+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "bin": [
                 "bin/sail"
             ],
@@ -2273,19 +2193,6 @@
         },
         {
             "name": "laravel/serializable-closure",
-<<<<<<< HEAD
-            "version": "v1.3.2",
-            "version_normalized": "1.3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "076fe2cf128bd54b4341cdc6d49b95b34e101e4c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/076fe2cf128bd54b4341cdc6d49b95b34e101e4c",
-                "reference": "076fe2cf128bd54b4341cdc6d49b95b34e101e4c",
-=======
             "version": "v1.3.3",
             "version_normalized": "1.3.3.0",
             "source": {
@@ -2297,7 +2204,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/3dbf8a8e914634c48d389c1234552666b3d43754",
                 "reference": "3dbf8a8e914634c48d389c1234552666b3d43754",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -2309,11 +2215,7 @@
                 "phpstan/phpstan": "^1.8.2",
                 "symfony/var-dumper": "^5.4.11"
             },
-<<<<<<< HEAD
-            "time": "2023-10-17T13:38:16+00:00",
-=======
             "time": "2023-11-08T14:08:06+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2620,19 +2522,6 @@
         },
         {
             "name": "league/flysystem",
-<<<<<<< HEAD
-            "version": "3.19.0",
-            "version_normalized": "3.19.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1b2aa10f2326e0351399b8ce68e287d8e9209a83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1b2aa10f2326e0351399b8ce68e287d8e9209a83",
-                "reference": "1b2aa10f2326e0351399b8ce68e287d8e9209a83",
-=======
             "version": "3.23.0",
             "version_normalized": "3.23.0.0",
             "source": {
@@ -2644,7 +2533,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d4ad81e2b67396e33dc9d7e54ec74ccf73151dcc",
                 "reference": "d4ad81e2b67396e33dc9d7e54ec74ccf73151dcc",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -2672,20 +2560,12 @@
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "google/cloud-storage": "^1.23",
                 "microsoft/azure-storage-blob": "^1.1",
-<<<<<<< HEAD
-                "phpseclib/phpseclib": "^3.0.14",
-=======
                 "phpseclib/phpseclib": "^3.0.34",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5.11|^10.0",
                 "sabre/dav": "^4.3.1"
             },
-<<<<<<< HEAD
-            "time": "2023-11-07T09:04:28+00:00",
-=======
             "time": "2023-12-04T10:16:17+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2719,11 +2599,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/thephpleague/flysystem/tree/3.19.0"
-=======
                 "source": "https://github.com/thephpleague/flysystem/tree/3.23.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -2739,19 +2615,6 @@
         },
         {
             "name": "league/flysystem-local",
-<<<<<<< HEAD
-            "version": "3.19.0",
-            "version_normalized": "3.19.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "8d868217f9eeb4e9a7320db5ccad825e9a7a4076"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/8d868217f9eeb4e9a7320db5ccad825e9a7a4076",
-                "reference": "8d868217f9eeb4e9a7320db5ccad825e9a7a4076",
-=======
             "version": "3.23.0",
             "version_normalized": "3.23.0.0",
             "source": {
@@ -2763,7 +2626,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/5cf046ba5f059460e86a997c504dd781a39a109b",
                 "reference": "5cf046ba5f059460e86a997c504dd781a39a109b",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -2772,11 +2634,7 @@
                 "league/mime-type-detection": "^1.0.0",
                 "php": "^8.0.2"
             },
-<<<<<<< HEAD
-            "time": "2023-11-06T20:35:28+00:00",
-=======
             "time": "2023-12-04T10:14:46+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2804,11 +2662,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem-local/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.19.0"
-=======
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -4649,19 +4503,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-            "version": "10.4.2",
-            "version_normalized": "10.4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "cacd8b9dd224efa8eb28beb69004126c7ca1a1a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/cacd8b9dd224efa8eb28beb69004126c7ca1a1a1",
-                "reference": "cacd8b9dd224efa8eb28beb69004126c7ca1a1a1",
-=======
             "version": "10.5.3",
             "version_normalized": "10.5.3.0",
             "source": {
@@ -4673,7 +4514,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6fce887c71076a73f32fd3e0774a6833fc5c7f19",
                 "reference": "6fce887c71076a73f32fd3e0774a6833fc5c7f19",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -4707,11 +4547,7 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
-<<<<<<< HEAD
-            "time": "2023-10-26T07:21:45+00:00",
-=======
             "time": "2023-12-13T07:25:23+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "bin": [
                 "phpunit"
             ],
@@ -4751,11 +4587,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.4.2"
-=======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.3"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -6767,17 +6599,17 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "2.3.1",
-            "version_normalized": "2.3.1.0",
+            "version": "2.3.2",
+            "version_normalized": "2.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "bf21cd15aa47fa4ec5d73bbc932005c70261efc8"
+                "reference": "4800661a195e15783477d99f7f8f669a49793996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/bf21cd15aa47fa4ec5d73bbc932005c70261efc8",
-                "reference": "bf21cd15aa47fa4ec5d73bbc932005c70261efc8",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/4800661a195e15783477d99f7f8f669a49793996",
+                "reference": "4800661a195e15783477d99f7f8f669a49793996",
                 "shasum": ""
             },
             "require": {
@@ -6806,7 +6638,7 @@
                 "openai-php/client": "Require get solutions from OpenAI",
                 "psr/simple-cache-implementation": "Needed to cache solutions from OpenAI"
             },
-            "time": "2023-10-09T12:55:26+00:00",
+            "time": "2023-12-15T13:44:49+00:00",
             "type": "library",
             "extra": {
                 "laravel": {
@@ -6862,19 +6694,6 @@
         },
         {
             "name": "symfony/console",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "0d14a9f6d04d4ac38a8cea1171f4554e325dae92"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/0d14a9f6d04d4ac38a8cea1171f4554e325dae92",
-                "reference": "0d14a9f6d04d4ac38a8cea1171f4554e325dae92",
-=======
             "version": "v6.4.1",
             "version_normalized": "6.4.1.0",
             "source": {
@@ -6886,7 +6705,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/a550a7c99daeedef3f9d23fb82e3531525ff11fd",
                 "reference": "a550a7c99daeedef3f9d23fb82e3531525ff11fd",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -6919,11 +6737,7 @@
                 "symfony/stopwatch": "^5.4|^6.0|^7.0",
                 "symfony/var-dumper": "^5.4|^6.0|^7.0"
             },
-<<<<<<< HEAD
-            "time": "2023-10-31T08:09:35+00:00",
-=======
             "time": "2023-11-30T10:54:28+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -6957,11 +6771,7 @@
                 "terminal"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/console/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/console/tree/v6.4.1"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -7426,19 +7236,6 @@
         },
         {
             "name": "symfony/http-foundation",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "ce332676de1912c4389222987193c3ef38033df6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ce332676de1912c4389222987193c3ef38033df6",
-                "reference": "ce332676de1912c4389222987193c3ef38033df6",
-=======
             "version": "v6.4.0",
             "version_normalized": "6.4.0.0",
             "source": {
@@ -7450,7 +7247,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/44a6d39a9cc11e154547d882d5aac1e014440771",
                 "reference": "44a6d39a9cc11e154547d882d5aac1e014440771",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -7465,16 +7261,6 @@
             "require-dev": {
                 "doctrine/dbal": "^2.13.1|^3|^4",
                 "predis/predis": "^1.1|^2.0",
-<<<<<<< HEAD
-                "symfony/cache": "^6.3",
-                "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/expression-language": "^5.4|^6.0",
-                "symfony/http-kernel": "^5.4.12|^6.0.12|^6.1.4",
-                "symfony/mime": "^5.4|^6.0",
-                "symfony/rate-limiter": "^5.2|^6.0"
-            },
-            "time": "2023-11-07T10:17:15+00:00",
-=======
                 "symfony/cache": "^6.3|^7.0",
                 "symfony/dependency-injection": "^5.4|^6.0|^7.0",
                 "symfony/expression-language": "^5.4|^6.0|^7.0",
@@ -7483,7 +7269,6 @@
                 "symfony/rate-limiter": "^5.4|^6.0|^7.0"
             },
             "time": "2023-11-20T16:41:16+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -7511,11 +7296,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/http-foundation/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/http-foundation/tree/v6.4.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -7535,19 +7316,6 @@
         },
         {
             "name": "symfony/http-kernel",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "929202375ccf44a309c34aeca8305408442ebcc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/929202375ccf44a309c34aeca8305408442ebcc1",
-                "reference": "929202375ccf44a309c34aeca8305408442ebcc1",
-=======
             "version": "v6.4.1",
             "version_normalized": "6.4.1.0",
             "source": {
@@ -7559,7 +7327,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2953274c16a229b3933ef73a6898e18388e12e1b",
                 "reference": "2953274c16a229b3933ef73a6898e18388e12e1b",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -7617,11 +7384,7 @@
                 "symfony/var-exporter": "^6.2|^7.0",
                 "twig/twig": "^2.13|^3.0.4"
             },
-<<<<<<< HEAD
-            "time": "2023-11-10T13:47:32+00:00",
-=======
             "time": "2023-12-01T17:02:02+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -7649,11 +7412,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/http-kernel/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/http-kernel/tree/v6.4.1"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -8843,19 +8602,6 @@
         },
         {
             "name": "symfony/string",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/string.git",
-                "reference": "13880a87790c76ef994c91e87efb96134522577a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/13880a87790c76ef994c91e87efb96134522577a",
-                "reference": "13880a87790c76ef994c91e87efb96134522577a",
-=======
             "version": "v7.0.0",
             "version_normalized": "7.0.0.0",
             "source": {
@@ -8867,7 +8613,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/92bd2bfbba476d4a1838e5e12168bef2fd1e6620",
                 "reference": "92bd2bfbba476d4a1838e5e12168bef2fd1e6620",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -8887,11 +8632,7 @@
                 "symfony/translation-contracts": "^2.5|^3.0",
                 "symfony/var-exporter": "^6.4|^7.0"
             },
-<<<<<<< HEAD
-            "time": "2023-11-09T08:28:21+00:00",
-=======
             "time": "2023-11-29T08:40:23+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -8930,11 +8671,7 @@
                 "utf8"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/string/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/string/tree/v7.0.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -8954,19 +8691,6 @@
         },
         {
             "name": "symfony/translation",
-<<<<<<< HEAD
-            "version": "v6.3.7",
-            "version_normalized": "6.3.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation.git",
-                "reference": "30212e7c87dcb79c83f6362b00bde0e0b1213499"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/30212e7c87dcb79c83f6362b00bde0e0b1213499",
-                "reference": "30212e7c87dcb79c83f6362b00bde0e0b1213499",
-=======
             "version": "v6.4.0",
             "version_normalized": "6.4.0.0",
             "source": {
@@ -8978,7 +8702,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/b1035dbc2a344b21f8fa8ac451c7ecec4ea45f37",
                 "reference": "b1035dbc2a344b21f8fa8ac451c7ecec4ea45f37",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -9015,11 +8738,7 @@
                 "symfony/service-contracts": "^2.5|^3",
                 "symfony/yaml": "^5.4|^6.0|^7.0"
             },
-<<<<<<< HEAD
-            "time": "2023-10-28T23:11:45+00:00",
-=======
             "time": "2023-11-29T08:14:36+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -9050,11 +8769,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/translation/tree/v6.3.7"
-=======
                 "source": "https://github.com/symfony/translation/tree/v6.4.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -9155,19 +8870,6 @@
         },
         {
             "name": "symfony/uid",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/uid.git",
-                "reference": "819fa5ac210fb7ddda4752b91a82f50be7493dd9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/uid/zipball/819fa5ac210fb7ddda4752b91a82f50be7493dd9",
-                "reference": "819fa5ac210fb7ddda4752b91a82f50be7493dd9",
-=======
             "version": "v6.4.0",
             "version_normalized": "6.4.0.0",
             "source": {
@@ -9179,7 +8881,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/uid/zipball/8092dd1b1a41372110d06374f99ee62f7f0b9a92",
                 "reference": "8092dd1b1a41372110d06374f99ee62f7f0b9a92",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -9189,11 +8890,7 @@
             "require-dev": {
                 "symfony/console": "^5.4|^6.0|^7.0"
             },
-<<<<<<< HEAD
-            "time": "2023-10-31T08:07:48+00:00",
-=======
             "time": "2023-10-31T08:18:17+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -9230,11 +8927,7 @@
                 "uuid"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/uid/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/uid/tree/v6.4.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -9254,19 +8947,6 @@
         },
         {
             "name": "symfony/var-dumper",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "81acabba9046550e89634876ca64bfcd3c06aa0a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/81acabba9046550e89634876ca64bfcd3c06aa0a",
-                "reference": "81acabba9046550e89634876ca64bfcd3c06aa0a",
-=======
             "version": "v6.4.0",
             "version_normalized": "6.4.0.0",
             "source": {
@@ -9278,7 +8958,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c40f7d17e91d8b407582ed51a2bbf83c52c367f6",
                 "reference": "c40f7d17e91d8b407582ed51a2bbf83c52c367f6",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -9298,11 +8977,7 @@
                 "symfony/uid": "^5.4|^6.0|^7.0",
                 "twig/twig": "^2.13|^3.0.4"
             },
-<<<<<<< HEAD
-            "time": "2023-11-08T10:42:36+00:00",
-=======
             "time": "2023-11-09T08:28:32+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "bin": [
                 "Resources/bin/var-dump-server"
             ],
@@ -9340,11 +9015,7 @@
                 "dump"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/var-dumper/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/var-dumper/tree/v6.4.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {
@@ -9364,19 +9035,6 @@
         },
         {
             "name": "symfony/yaml",
-<<<<<<< HEAD
-            "version": "v6.3.8",
-            "version_normalized": "6.3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "3493af8a8dad7fa91c77fa473ba23ecd95334a92"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3493af8a8dad7fa91c77fa473ba23ecd95334a92",
-                "reference": "3493af8a8dad7fa91c77fa473ba23ecd95334a92",
-=======
             "version": "v7.0.0",
             "version_normalized": "7.0.0.0",
             "source": {
@@ -9388,7 +9046,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/0055b230c408428b9b5cde7c55659555be5c0278",
                 "reference": "0055b230c408428b9b5cde7c55659555be5c0278",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
                 "shasum": ""
             },
             "require": {
@@ -9401,11 +9058,7 @@
             "require-dev": {
                 "symfony/console": "^6.4|^7.0"
             },
-<<<<<<< HEAD
-            "time": "2023-11-06T10:58:05+00:00",
-=======
             "time": "2023-11-07T10:26:03+00:00",
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             "bin": [
                 "Resources/bin/yaml-lint"
             ],
@@ -9436,11 +9089,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/yaml/tree/v6.3.8"
-=======
                 "source": "https://github.com/symfony/yaml/tree/v7.0.0"
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             },
             "funding": [
                 {

@@ -34,11 +34,7 @@ final class Version
         }
 
         if (self::$version === '') {
-<<<<<<< HEAD
-            self::$version = (new VersionId('10.4.2', dirname(__DIR__, 2)))->asString();
-=======
             self::$version = (new VersionId('10.5.3', dirname(__DIR__, 2)))->asString();
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
         }
 
         return self::$version;

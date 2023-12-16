@@ -175,8 +175,6 @@ class PostgresBuilder extends Builder
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Drop all types from the database.
      *
      * @return void
@@ -208,7 +206,6 @@ class PostgresBuilder extends Builder
     }
 
     /**
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
      * Get the columns for a given table.
      *
      * @param  string  $table
@@ -225,8 +222,6 @@ class PostgresBuilder extends Builder
         );
 
         return $this->connection->getPostProcessor()->processColumns($results);
-<<<<<<< HEAD
-=======
     }
 
     /**
@@ -273,7 +268,6 @@ class PostgresBuilder extends Builder
         return $this->parseSearchPath(
             $this->connection->getConfig('search_path') ?: $this->connection->getConfig('schema') ?: 'public'
         );
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
     }
 
     /**

@@ -1,8 +1,5 @@
 # Release Notes for 10.x
 
-<<<<<<< HEAD
-## [Unreleased](https://github.com/laravel/framework/compare/v10.30.1...10.x)
-=======
 ## [Unreleased](https://github.com/laravel/framework/compare/v10.37.1...10.x)
 
 ## [v10.37.1](https://github.com/laravel/framework/compare/v10.37.0...v10.37.1) - 2023-12-12
@@ -143,7 +140,6 @@
 - [10.x] Add support for Sec-Purpose header by [@nanos](https://github.com/nanos) in https://github.com/laravel/framework/pull/48925
 - [10.x] Allow setting retain_visibility config option on Flysystem filesystems by [@jnoordsij](https://github.com/jnoordsij) in https://github.com/laravel/framework/pull/48935
 - [10.x] Escape forward slashes when exploding wildcard rules by [@matt-farrugia](https://github.com/matt-farrugia) in https://github.com/laravel/framework/pull/48936
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
 
 ## [v10.30.1](https://github.com/laravel/framework/compare/v10.30.0...v10.30.1) - 2023-11-01
 

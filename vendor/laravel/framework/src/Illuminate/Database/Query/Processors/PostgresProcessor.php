@@ -46,8 +46,6 @@ class PostgresProcessor extends Processor
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Process the results of a types query.
      *
      * @param  array  $results
@@ -96,7 +94,6 @@ class PostgresProcessor extends Processor
     }
 
     /**
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
      * Process the results of a columns query.
      *
      * @param  array  $results
@@ -121,8 +118,6 @@ class PostgresProcessor extends Processor
             ];
         }, $results);
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Process the results of an indexes query.
@@ -181,5 +176,4 @@ class PostgresProcessor extends Processor
             ];
         }, $results);
     }
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
 }

@@ -350,8 +350,6 @@ class Builder
         return $this->connection->getPostProcessor()->processColumns(
             $this->connection->selectFromWriteConnection($this->grammar->compileColumns($table))
         );
-<<<<<<< HEAD
-=======
     }
 
     /**
@@ -382,7 +380,6 @@ class Builder
         return $this->connection->getPostProcessor()->processForeignKeys(
             $this->connection->selectFromWriteConnection($this->grammar->compileForeignKeys($table))
         );
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
     }
 
     /**

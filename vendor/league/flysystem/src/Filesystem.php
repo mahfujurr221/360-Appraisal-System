@@ -264,11 +264,7 @@ class Filesystem implements FilesystemOperator
 
     private function resolveConfigForMoveAndCopy(array $config): Config
     {
-<<<<<<< HEAD
-        $retainVisibility = $this->config->get('retain_visibility', $config['retain_visibility'] ?? true);
-=======
         $retainVisibility = $this->config->get(Config::OPTION_RETAIN_VISIBILITY, $config[Config::OPTION_RETAIN_VISIBILITY] ?? true);
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
         $fullConfig = $this->config->extend($config);
 
         /*

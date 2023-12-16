@@ -45,8 +45,6 @@ class MySqlBuilder extends Builder
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Get the views for the database.
      *
      * @return array
@@ -89,7 +87,6 @@ class MySqlBuilder extends Builder
     }
 
     /**
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
      * Get the columns for a given table.
      *
      * @param  string  $table
@@ -104,8 +101,6 @@ class MySqlBuilder extends Builder
         );
 
         return $this->connection->getPostProcessor()->processColumns($results);
-<<<<<<< HEAD
-=======
     }
 
     /**
@@ -140,7 +135,6 @@ class MySqlBuilder extends Builder
                 $this->grammar->compileForeignKeys($this->connection->getDatabaseName(), $table)
             )
         );
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
     }
 
     /**

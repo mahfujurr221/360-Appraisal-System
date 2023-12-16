@@ -508,24 +508,10 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
         }
 
         try {
-<<<<<<< HEAD
-            try {
-                $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
-            } catch (InvalidArgumentException|\ValueError $e) {
-                if (!\function_exists('iconv')) {
-                    if ($e instanceof \ValueError) {
-                        throw new InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
-                    }
-                    throw $e;
-                }
-
-                $b->string = iconv('UTF-8', $toEncoding, $this->string);
-=======
             $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
         } catch (\ValueError $e) {
             if (!\function_exists('iconv')) {
                 throw new InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
             }
 
             $b->string = iconv('UTF-8', $toEncoding, $this->string);

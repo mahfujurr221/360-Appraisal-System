@@ -46,8 +46,6 @@ class SQLiteProcessor extends Processor
             ];
         }, $results);
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Process the results of an indexes query.
@@ -104,5 +102,4 @@ class SQLiteProcessor extends Processor
             ];
         }, $results);
     }
->>>>>>> f7c435145fdf9e8907e69d71792f5163e91bf6b2
 }
