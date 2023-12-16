@@ -40,7 +40,7 @@
                                         @php
                                             $question = App\Models\SurveyQuestion::find($question);
                                         @endphp
-                                        <span class="badge bg-primary">{{ $question->question?? '' }}</span>
+                                        <span class="badge bg-primary">{{ $question->question?? '' }}</span><br>
                                     @endforeach
                                 </td>
                                 <td>{{ $surveySetup->description }}</td>
