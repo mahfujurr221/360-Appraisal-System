@@ -21,7 +21,9 @@
                         <tr class="text-center">
                             <th>#</th>
                             <th>Survey Name</th>
+                            <th>Survey For Employee</th>
                             <th>Survey Questions</th>
+                            <th>Survey By Employees</th>
                             <th>Survey Description</th>
                             <th>Survey Status</th>
                             <th>Actions</th>
@@ -32,6 +34,7 @@
                             <tr class="text-center align-middle">
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $surveySetup->title }}</td>
+                                <td>{{ $surveySetup->surveyFor->name }}</td>
                                 @php
                                     $questions = json_decode($surveySetup->questions);
                                 @endphp
@@ -43,6 +46,18 @@
                                         <span class="badge bg-primary">{{ $question->question?? '' }}</span><br>
                                     @endforeach
                                 </td>
+                                <td>
+                                    @php
+                                        $surveyBy = json_decode($surveySetup->survey_by_ids);
+                                    @endphp
+                                    @foreach ($surveyBy as $survey)
+                                        @php
+                                            $survey = App\Models\User::find($survey);
+                                        @endphp
+                                        <span>{{ $survey->name }}</span><br>
+                                    @endforeach
+                                </td>
+
                                 <td>{{ $surveySetup->description }}</td>
                                 <td>
                                     @if ($surveySetup->status == 'active')

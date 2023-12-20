@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class="card-body">
-            <form class="row g-3" action="{{ route('survey-setup.update', $surveySetup->id) }}"
-             method="POST" enctype="multipart/form-data">
+            <form class="row g-3" action="{{ route('survey-setup.update', $surveySetup->id) }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
-                @method('PUT')  
+                @method('PUT')
                 <div class="col-md-8">
                     <label for="input25" class="form-label">Survey Name</label>
                     <div class="input-group">
@@ -40,6 +40,34 @@
                             </option>
                             <option value="completed" {{ $surveySetup->status == 'completed' ? 'selected' : '' }}>
                                 Completed</option>
+                        </select>
+                    </div>
+                </div>
+                {{-- Survey For --}}
+                <div class="col-md-6">
+                    <label for="input25" class="form-label">Survey For</label>
+                    <div class="input-group">
+                        <select name="survey_for_id" id="input25" class="form-select" required>
+                            <option selected disabled>Select Employee</option>
+                            @foreach ($employees as $employee)
+                                <option value="{{ $employee->id }}"
+                                    {{ $surveySetup->survey_for_id == $employee->id ? 'selected' : '' }}>
+                                    {{ $employee->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                {{-- Survey By --}}
+                <div class="col-md-6">
+                    <label for="input25" class="form-label">Survey By</label>
+                    <div class="input-group">
+                        <select name="survey_by_ids[]" id="input26" class="form-select multiple-select-field"
+                            multiple="multiple">
+                            @foreach ($employees as $employee)
+                                <option value="{{ $employee->id }}"
+                                    {{ in_array($employee->id, json_decode($surveySetup->survey_by_ids)) ? 'selected' : '' }}>
+                                    {{ $employee->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

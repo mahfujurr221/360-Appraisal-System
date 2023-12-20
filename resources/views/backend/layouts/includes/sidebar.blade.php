@@ -101,7 +101,9 @@
         @elseif(auth()->user()->role_id == 3)
             @php
                 //active survey setup
-                $activeSurveySetup = App\Models\SurveySetup::where('status', 'active')->first();
+                $activeSurveySetup = App\Models\SurveySetup::where('status', 'active')
+                    ->whereJsonContains('survey_by_ids', strval(auth()->user()->id))
+                    ->first();
             @endphp
             {{-- if active survey setup is not null --}}
             @if ($activeSurveySetup != null)

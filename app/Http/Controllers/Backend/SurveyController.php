@@ -15,7 +15,9 @@ class SurveyController extends Controller
     //
     public function surveyStart()
     {
-        $employees = Employee::with('designation')->get();
+        //survey_by_ids is a json field string in survey_setups table
+        $employees = SurveySetup::with('surveyFor')->where('status', 'active')->whereJsonContains('survey_by_ids', strval(auth()->user()->id))->get();
+        $employees = $employees->pluck('surveyFor');
         return view('backend.pages.survey.survey-start', compact('employees'));
     }
 

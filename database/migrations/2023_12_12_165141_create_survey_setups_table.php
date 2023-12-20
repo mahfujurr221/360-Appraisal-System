@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('survey_setups', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->date('ended_at')->nullable();
-            $table->date('started_at')->nullable();
+            $table->foreignId('survey_for_id')->constrained('users')->onDelete('cascade');
+            $table->json('survey_by_ids')->nullable();
             $table->string('description')->nullable();
             $table->json('questions')->nullable();
             $table->string('status')->default('inactive')->comment('active, inactive','completed');

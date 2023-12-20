@@ -23,14 +23,38 @@
                         <span class="input-group-text">
                             <i class="bx bx-edit-alt"></i>
                         </span>
-                        <input type="text" class="form-control" id="input25" name="title" placeholder="Survey Name"
+                        <input type="text" class="form-control" id="input24" name="title" placeholder="Survey Name"
                             required>
+                    </div>
+                </div>
+                {{-- Survey For --}}
+                <div class="col-md-6">
+                    <label for="input25" class="form-label">Survey For</label>
+                    <div class="input-group">
+                        <select name="survey_for_id" id="input25" class="form-select" required>
+                            <option selected disabled>Select Employee</option>
+                            @foreach ($employees as $employee)
+                                <option value="{{ $employee->id }}">{{ $employee->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                {{-- Survey By --}}
+                <div class="col-md-6">
+                    <label for="input25" class="form-label">Survey By</label>
+                    <div class="input-group">
+                        <select name="survey_by_ids[]" id="input26" class="form-select multiple-select-field"
+                            multiple="multiple">
+                            @foreach ($employees as $employee)
+                                <option value="{{ $employee->id }}">{{ $employee->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-111">
                     <label for="input25" class="form-label">Description</label>
                     <div class="input-group">
-                        <textarea name="description" class="form-control" id="input25" cols="30" rows="5" required
+                        <textarea name="description" class="form-control" id="input27" cols="30" rows="5" required
                             placeholder="Description"></textarea>
                     </div>
                 </div>
@@ -58,3 +82,19 @@
         </div>
     </div>
 @endsection
+{{-- @push('js')
+    <script>
+        //name="survey_for_id"
+        $('#input25').on('change', function() {
+            var survey_for_id = $(this).val();
+
+            //disable this id in survey_by_ids
+            //remove disabled attr
+            $('#input26 option[value="' + survey_for_id + '"]').attr('disabled', false);
+            $('#input26 option[value="' + survey_for_id + '"]').attr('disabled', true);
+
+
+
+        });
+    </script>
+@endpush --}}
