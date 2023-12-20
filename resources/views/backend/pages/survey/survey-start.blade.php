@@ -14,24 +14,13 @@
                     @if ($employee->user_id != auth()->user()->id)
                         <div class="col">
                             <div class="card radius-15">
-                                <div class="card-body text-center">
+                                <div class="text-center card-body">
                                     <div class="p-4 border radius-15">
                                         <img src="{{ asset('assets/images/users') }}/{{ $employee->image }}"
-                                            width="110" height="110" class="rounded-circle shadow" alt="">
-                                        <h5 class="mb-0 mt-5">{{ $employee->name }}</h5>
+                                            width="110" height="110" class="shadow rounded-circle" alt="">
+                                        <h5 class="mt-5 mb-0">{{ $employee->name }}</h5>
                                         <p class="mb-3">{{ $employee->designation->name }}</p>
-                                        <div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;"
-                                                class="list-inline-item bg-facebook text-white border-0"><i
-                                                    class="bx bxl-facebook"></i></a>
-                                            <a href="javascript:;"
-                                                class="list-inline-item bg-twitter text-white border-0"><i
-                                                    class="bx bxl-twitter"></i></a>
-                                            <a href="javascript:;" class="list-inline-item bg-google text-white border-0"><i
-                                                    class="bx bxl-google"></i></a>
-                                            <a href="javascript:;"
-                                                class="list-inline-item bg-linkedin text-white border-0"><i
-                                                    class="bx bxl-linkedin"></i></a>
-                                        </div>
+                                        
                                         <div class="d-grid">
                                             @php
                                                 $surveySetup = App\Models\SurveySetup::where('status', 'active')->first();
