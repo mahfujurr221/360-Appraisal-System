@@ -17,8 +17,9 @@ return new class extends Migration
             $table->foreignId('survey_for_id')->constrained('users')->onDelete('cascade');
             $table->json('survey_by_ids')->nullable();
             $table->string('description')->nullable();
+            $table->foreignId('question_set_id')->constrained('question_sets');
             $table->json('questions')->nullable();
-            $table->string('status')->default('inactive')->comment('active, inactive','completed');
+            $table->string('status')->default('active')->comment('active, inactive','completed');
             $table->timestamps();
         });
     }

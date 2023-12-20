@@ -13,4 +13,9 @@ class SurveySetup extends Model
     {
         return $this->belongsTo(Employee::class, 'survey_for_id', 'user_id');
     }
+
+    public function questionSet()
+    {
+        return $this->belongsTo(QuestionSet::class);
+    }
 }

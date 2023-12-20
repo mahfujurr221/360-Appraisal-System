@@ -21,8 +21,9 @@
                     <thead>
                         <tr class="text-center">
                             <th>#</th>
+                            <th>Set Name</th>
                             <th>Question</th>
-                            <th>Oprations</th>
+                            <th>Options</th>
                             <th>Points</th>
                             <th>Actions</th>
                         </tr>
@@ -31,6 +32,7 @@
                         @foreach ($surveyQuestions as $key => $question)
                             <tr class="align-middle text-center">
                                 <td>{{ $key + 1 }}</td>
+                                <td>{{ $question->questionSet->name }}</td>
                                 <td>{{ $question->question }}</td>
                                 <td>
                                     {{ $question->option1 }} <br>
@@ -74,6 +76,22 @@
                                                                 <input type="text" class="form-control"
                                                                     placeholder="Question" name="question" required
                                                                     value="{{ $question->question }}">
+                                                            </div>
+                                                        </div>
+                                                        {{-- question set --}}
+                                                        <div class="col-md-12">
+                                                            <label for="input25" class="form-label">Question Set</label>
+                                                            <div class="input-group">
+                                                                <select name="question_set_id" id="input25"
+                                                                    class="form-select" required>
+                                                                    <option selected disabled>Select Question Set
+                                                                    </option>
+                                                                    @foreach ($questionSets as $questionSet)
+                                                                        <option value="{{ $questionSet->id }}"
+                                                                            {{ $question->question_set_id == $questionSet->id ? 'selected' : '' }}>
+                                                                            {{ $questionSet->name }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -212,6 +230,18 @@
                                     </span>
                                     <input type="text" class="form-control" placeholder="Question" name="question"
                                         required>
+                                </div>
+                            </div>
+                            {{-- question set --}}
+                            <div class="col-md-12">
+                                <label for="input25" class="form-label">Question Set</label>
+                                <div class="input-group">
+                                    <select name="question_set_id" id="input25" class="form-select" required>
+                                        <option selected disabled>Select Question Set</option>
+                                        @foreach ($questionSets as $questionSet)
+                                            <option value="{{ $questionSet->id }}">{{ $questionSet->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">

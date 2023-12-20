@@ -79,27 +79,22 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <label for="input25" class="form-label">Select Question</label>
-                    <div class="row">
-                        @foreach ($surveyQuestions as $surveyQuestion)
-                            <div class="col-md-6">
-                                <div class="form-check fw-bold">
-                                    <input class="form-check-input" type="checkbox" id="{{ $surveyQuestion->id }}"
-                                        name="survey_question_id[]" value="{{ $surveyQuestion->id }}"
-                                        @foreach (json_decode($surveySetup->questions) as $question)
-                                            {{ $question == $surveyQuestion->id ? 'checked' : '' }} @endforeach>
-                                    <label class="form-check-label" for="{{ $surveyQuestion->id }}">
-                                        {{ $surveyQuestion->question }}
-                                    </label>
-                                </div>
-                            </div>
-                        @endforeach
+                    <label for="input25" class="form-label">Select Question Set</label>
+                    <div class="input-group">
+                        <select name="question_set_id" id="input25" class="form-select" required>
+                            <option selected disabled>Select Question Set</option>
+                            @foreach ($questionSets as $questionSet)
+                                <option value="{{ $questionSet->id }}"
+                                    {{ $surveySetup->question_set_id == $questionSet->id ? 'selected' : '' }}>
+                                    {{ $questionSet->name }}</option>
+                            @endforeach
+                        </select>
+
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
             </form>
         </div>
     </div>

@@ -63,6 +63,14 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('question-set.index') }}">
+                    <div class="parent-icon">
+                        <i class='bx bx-question-mark'></i>
+                    </div>
+                    <div class="menu-title">Question Set</div>
+                </a>
+            </li>
+            <li>
                 <a href="{{ route('survey-question.index') }}">
                     <div class="parent-icon">
                         <i class='bx bx-question-mark'></i>

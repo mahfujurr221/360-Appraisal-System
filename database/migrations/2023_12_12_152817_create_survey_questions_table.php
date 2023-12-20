@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('survey_questions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('question_set_id')->constrained('question_sets');
             $table->string('question');
             $table->string('option1')->nullable();
             $table->integer('point1')->nullable();

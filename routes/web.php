@@ -7,9 +7,11 @@ use App\Http\Controllers\Backend\DesignationController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\MaintenanceController;
+use App\Http\Controllers\Backend\QuestionSetController;
 use App\Http\Controllers\Backend\SurveyController;
 use App\Http\Controllers\Backend\SurveyQuestionController;
 use App\Http\Controllers\Backend\SurveySetupController;
+use Symfony\Component\Console\Question\Question;
 
 Route::get('/', function () {
     // return login page 
@@ -33,6 +35,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('designation', DesignationController::class);
     //employee
     Route::resource('employee', EmployeeController::class);
+
+    //question set
+    Route::resource('question-set', QuestionSetController::class);
 
     //survey question
     Route::resource('survey-question', SurveyQuestionController::class);

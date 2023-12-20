@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\QuestionSet;
 use App\Models\SurveyQuestion;
 use Illuminate\Http\Request;
 
@@ -10,8 +11,9 @@ class SurveyQuestionController extends Controller
 {
     public function index()
     {
-        $surveyQuestions = SurveyQuestion::all();
-        return view('backend.pages.survey-question.index', compact('surveyQuestions'));
+        $surveyQuestions = SurveyQuestion::with('questionSet')->get();
+        $questionSets = QuestionSet::all();
+        return view('backend.pages.survey-question.index', compact('surveyQuestions', 'questionSets'));
     }
 
     public function create()
@@ -23,6 +25,7 @@ class SurveyQuestionController extends Controller
     {
         //
         $surveyQuestion = new SurveyQuestion();
+        $surveyQuestion->question_set_id = $request->question_set_id;
         $surveyQuestion->question = $request->question;
         $surveyQuestion->option1 = $request->option1;
         $surveyQuestion->point1 = $request->point1;
@@ -50,6 +53,7 @@ class SurveyQuestionController extends Controller
     public function update(Request $request, string $id)
     {
         $surveyQuestion = SurveyQuestion::find($id);
+        $surveyQuestion->question_set_id = $request->question_set_id;
         $surveyQuestion->question = $request->question;
         $surveyQuestion->option1 = $request->option1;
         $surveyQuestion->point1 = $request->point1;

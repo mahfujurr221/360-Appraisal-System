@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SurveyQuestion extends Model
+class QuestionSet extends Model
 {
     use HasFactory;
 
-    public function questionSet()
+    public function surveyQuestion()
     {
-        return $this->belongsTo(QuestionSet::class);
+        return $this->hasMany(SurveyQuestion::class);
     }
 }

@@ -22,6 +22,7 @@
                             <th>#</th>
                             <th>Survey Name</th>
                             <th>Survey For Employee</th>
+                            <th>Question Set Name</th>
                             <th>Survey Questions</th>
                             <th>Survey By Employees</th>
                             <th>Survey Description</th>
@@ -35,6 +36,7 @@
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $surveySetup->title }}</td>
                                 <td>{{ $surveySetup->surveyFor->name }}</td>
+                                <td>{{ $surveySetup->questionSet->name }}</td>
                                 @php
                                     $questions = json_decode($surveySetup->questions);
                                 @endphp
