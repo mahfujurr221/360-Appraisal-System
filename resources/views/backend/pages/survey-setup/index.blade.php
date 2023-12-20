@@ -40,14 +40,14 @@
                                 @php
                                     $questions = json_decode($surveySetup->questions);
                                 @endphp
-                                <td>
+                                {{-- <td>
                                     @foreach ($questions as $question)
                                         @php
                                             $question = App\Models\SurveyQuestion::find($question);
                                         @endphp
                                         <span class="badge bg-primary">{{ $question->question?? '' }}</span><br>
                                     @endforeach
-                                </td>
+                                </td> --}}
                                 <td>
                                     @php
                                         $surveyBy = json_decode($surveySetup->survey_by_ids);
