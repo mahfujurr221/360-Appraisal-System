@@ -16,15 +16,28 @@ class SurveyController extends Controller
     public function surveyStart()
     {
         //survey_by_ids is a json field string in survey_setups table
-        $employees = SurveySetup::with('surveyFor')->where('status', 'active')->whereJsonContains('survey_by_ids', strval(auth()->user()->id))->get();
+        $survey = SurveySetup::join('survey_details', 'survey_setups.survey_detail_id', '=', 'survey_details.id')
+            ->where('status', 'active')
+            ->whereJsonContains('survey_by_ids', strval(auth()->user()->id))
+            ->select('survey_setups.*', 'survey_details.title as title', 'survey_details.description as description')
+            ->get();
+        return view('backend.pages.survey.survey-start', compact('survey'));
+    }
+    // surveyEmployee
+    public function surveyEmployee(string $id)
+    {
+        $surveySetupId = $id;
+        $employees = SurveySetup::with('surveyFor')->where('status', 'active')->where('id', $surveySetupId)->get();
         $employees = $employees->pluck('surveyFor');
-        return view('backend.pages.survey.survey-start', compact('employees'));
+        return view('backend.pages.survey.survey-employee', compact('employees', 'surveySetupId'));
     }
 
-    public function surveyQuestions(string $id)
+    public function surveyQuestions(string $id, string $employee_id)
     {
-        $employee = Employee::with('designation')->find($id);
-        $surveySetup = SurveySetup::where('status', 'active')->first();
+        $employee = Employee::with('designation')->find($employee_id);
+        $surveySetup = SurveySetup::join('survey_details', 'survey_setups.survey_detail_id', '=', 'survey_details.id')
+            ->select('survey_setups.*', 'survey_details.title as title', 'survey_details.description as description')
+            ->where('status', 'active')->find($id);
         return view('backend.pages.survey.survey-questions', compact('employee', 'surveySetup'));
     }
 
@@ -78,24 +91,26 @@ class SurveyController extends Controller
     public function surveyReport(Request $request)
     {
         // return response()->json($request->all());
-        if ($request->employee_id && $request->survey_setup_id) {
-            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+        if ($request->employee_id && $request->survey_detail_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup.surveyDetails')
+                ->join('survey_setups', 'survey_setups.id', '=', 'survey_responses.survey_setup_id')
                 ->where('employee_id', $request->employee_id)
-                ->where('survey_setup_id', $request->survey_setup_id)
+                ->where('survey_setups.survey_detail_id', $request->survey_detail_id)
                 ->orderBy('points', 'desc')
                 ->get();
-        } elseif ($request->employee_id && !$request->survey_setup_id) {
-            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+        } elseif ($request->employee_id && !$request->survey_detail_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup.surveyDetails')
                 ->where('employee_id', $request->employee_id)
                 ->orderBy('points', 'desc')
                 ->get();
-        } elseif (!$request->employee_id && $request->survey_setup_id) {
-            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
-                ->where('survey_setup_id', $request->survey_setup_id)
+        } elseif (!$request->employee_id && $request->survey_detail_id) {
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup.surveyDetails')
+                ->join('survey_setups', 'survey_setups.id', '=', 'survey_responses.survey_setup_id')
+                ->where('survey_setups.survey_detail_id', $request->survey_detail_id)
                 ->orderBy('points', 'desc')
                 ->get();
         } else {
-            $surveyResponses = SurveyResponse::with('employee', 'surveySetup')
+            $surveyResponses = SurveyResponse::with('employee', 'surveySetup.surveyDetails')
                 ->orderBy('points', 'desc')
                 ->get();
         }
@@ -104,7 +119,7 @@ class SurveyController extends Controller
 
     public function surveyReportDetails(string $id)
     {
-        $surveyResponse = SurveyResponse::with('employee', 'surveySetup', 'surveyResponseDetails.surveyQuestion')->find($id);
+        $surveyResponse = SurveyResponse::with('employee', 'surveySetup.surveyDetails', 'surveyResponseDetails.surveyQuestion')->find($id);
         // return response()->json($surveyResponse);       
         return view('backend.pages.survey.survey-report-details', compact('surveyResponse'));
     }

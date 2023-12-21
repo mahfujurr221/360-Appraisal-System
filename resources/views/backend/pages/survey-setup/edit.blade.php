@@ -20,13 +20,16 @@
                 @csrf
                 @method('PUT')
                 <div class="col-md-8">
-                    <label for="input25" class="form-label">Survey Name</label>
+                    <label for="input25" class="form-label">Select Survey</label>
                     <div class="input-group">
-                        <span class="input-group-text">
-                            <i class="bx bx-edit-alt"></i>
-                        </span>
-                        <input type="text" class="form-control" id="input25" name="title" placeholder="Survey Name"
-                            value="{{ $surveySetup->title }}" required>
+                        <select name="survey_detail_id" id="input25" class="form-select" required>
+                            <option selected disabled>Select Survey</option>
+                            @foreach ($surveyDetails as $surveyDetail)
+                                <option value="{{ $surveyDetail->id }}"
+                                    {{ $surveySetup->survey_detail_id == $surveyDetail->id ? 'selected' : '' }}>
+                                    {{ $surveyDetail->title }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -69,13 +72,6 @@
                                     {{ $employee->name }}</option>
                             @endforeach
                         </select>
-                    </div>
-                </div>
-                <div class="col-md-111">
-                    <label for="input25" class="form-label">Description</label>
-                    <div class="input-group">
-                        <textarea name="description" class="form-control" id="input25" cols="30" rows="5" required
-                            placeholder="Description">{{ $surveySetup->description }}</textarea>
                     </div>
                 </div>
                 <div class="col-md-12">

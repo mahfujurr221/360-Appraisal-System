@@ -14,14 +14,14 @@
                 <form class="row g-3" action="{{ route('survey-report.index') }}" method="GET">
                     <div class="col-md-4">
                         @php
-                            $surveySetups = App\Models\SurveySetup::all();
+                            $surveyDetails = App\Models\SurveyDetail::all();
                         @endphp
                         <label for="name" class="form-label">Survey Name</label>
-                        <select name="survey_setup_id" class="form-select">
+                        <select name="survey_detail_id" class="form-select">
                             <option value="" selected>Select Survey</option>
-                            @foreach ($surveySetups as $survey)
+                            @foreach ($surveyDetails as $survey)
                                 <option value="{{ $survey->id }}"
-                                    {{ request()->get('survey_setup_id') == $survey->id ? 'selected' : '' }}>
+                                    {{ request()->get('survey_detail_id') == $survey->id ? 'selected' : '' }}>
                                     {{ $survey->title }}</option>
                             @endforeach
                         </select>
@@ -66,7 +66,7 @@
                         @foreach ($surveyResponses as $key => $surveyResponse)
                             <tr class="text-center">
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $surveyResponse->surveySetup->title }}</td>
+                                <td>{{ $surveyResponse->surveySetup->surveyDetails->title }}</td>
                                 <td>{{ $surveyResponse->employee->name }}</td>
                                 <td>{{ $surveyResponse->points }}</td>
                                 <td>

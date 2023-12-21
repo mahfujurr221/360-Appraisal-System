@@ -21,7 +21,7 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Survey Name:</th>
-                            <td>{{ $surveyResponse->surveySetup->title }}</td>
+                            <td>{{ $surveyResponse->surveySetup->surveyDetails->title }}</td>
                         </tr>
                         <tr>
                             <th>Employee Name:</th>
@@ -64,7 +64,8 @@
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $surveyResponseDetail->surveyQuestion->question }}</td>
                                     <td>{{ $surveyResponseDetail->surveyQuestion->option1 }}
-                                        ({{ $surveyResponseDetail->option1 }})</td>
+                                        ({{ $surveyResponseDetail->option1 }})
+                                    </td>
                                     <td>{{ $surveyResponseDetail->surveyQuestion->option2 }}
                                         ({{ $surveyResponseDetail->option2 }})</td>
                                     <td>{{ $surveyResponseDetail->surveyQuestion->option3 }}

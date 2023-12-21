@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\MaintenanceController;
 use App\Http\Controllers\Backend\QuestionSetController;
 use App\Http\Controllers\Backend\SurveyController;
+use App\Http\Controllers\Backend\SurveyDetailsController;
 use App\Http\Controllers\Backend\SurveyQuestionController;
 use App\Http\Controllers\Backend\SurveySetupController;
 use Symfony\Component\Console\Question\Question;
@@ -42,6 +43,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     //survey question
     Route::resource('survey-question', SurveyQuestionController::class);
 
+    //survey details
+    Route::resource('survey-details', SurveyDetailsController::class);
     //survey setup
     Route::resource('survey-setup', SurveySetupController::class);
 
@@ -51,7 +54,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 
     //survey
     Route::get('survey-start', [SurveyController::class, 'surveyStart'])->name('survey.start');
-    Route::get('survey-questions/{id}', [SurveyController::class, 'surveyQuestions'])->name('survey.questions');
+    Route::get('survey-employee/{id}', [SurveyController::class, 'surveyEmployee'])->name('survey.employee');
+    Route::get('survey-question/{survey_setup_id}/{employee_id}',[SurveyController::class, 'surveyQuestions'])->name('survey.questions');
     Route::post('survey-submit', [SurveyController::class, 'surveySubmit'])->name('survey.submit');
 
     //other routes

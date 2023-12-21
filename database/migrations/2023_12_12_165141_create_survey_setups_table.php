@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('survey_setups', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->foreignId('survey_detail_id')->constrained('survey_details')->onDelete('cascade');
             $table->foreignId('survey_for_id')->constrained('users')->onDelete('cascade');
             $table->json('survey_by_ids')->nullable();
-            $table->string('description')->nullable();
             $table->foreignId('question_set_id')->constrained('question_sets');
             $table->json('questions')->nullable();
             $table->string('status')->default('active')->comment('active, inactive','completed');

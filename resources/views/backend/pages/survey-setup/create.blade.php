@@ -18,13 +18,15 @@
             <form class="row g-3" action="{{ route('survey-setup.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="col-md-12">
-                    <label for="input25" class="form-label">Survey Name</label>
+                    <label for="input25" class="form-label">Select Survey</label>
                     <div class="input-group">
-                        <span class="input-group-text">
-                            <i class="bx bx-edit-alt"></i>
-                        </span>
-                        <input type="text" class="form-control" id="input24" name="title" placeholder="Survey Name"
-                            required>
+                        <select name="survey_detail_id"
+                        id="input25" class="form-select" required>
+                            <option selected disabled>Select Survey</option>
+                            @foreach ($surveyDetails as $surveyDetail)
+                                <option value="{{ $surveyDetail->id }}">{{ $surveyDetail->title }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 {{-- Survey For --}}
@@ -49,13 +51,6 @@
                                 <option value="{{ $employee->id }}">{{ $employee->name }}</option>
                             @endforeach
                         </select>
-                    </div>
-                </div>
-                <div class="col-md-111">
-                    <label for="input25" class="form-label">Description</label>
-                    <div class="input-group">
-                        <textarea name="description" class="form-control" id="input27" cols="30" rows="5" required
-                            placeholder="Description"></textarea>
                     </div>
                 </div>
                 <div class="col-md-12">
