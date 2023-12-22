@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('assets') }}/images/ist_logo_mini.gif" type="image/gif" />
+    <link rel="icon" href="{{ asset('assets') }}/images/sub_logo.jpg" type="image/gif" />
     <!--plugins-->
     <link href="{{ asset('assets') }}/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
     <link href="{{ asset('assets') }}/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
@@ -21,7 +20,9 @@
         rel="stylesheet">
     <link href="{{ asset('assets') }}/css/app.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/css/icons.css" rel="stylesheet">
+
     <title>360 Appraisal System</title>
+
 </head>
 
 <body class="">
@@ -34,7 +35,7 @@
                     <div
                         class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
 
-                        <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
+                        <div class="mb-0 bg-transparent shadow-none card rounded-0">
                             <div class="card-body">
                                 <img src="{{ asset('assets') }}/images/login-images/login-cover.svg"
                                     class="img-fluid auth-img-cover-login" width="650" alt="" />
@@ -44,14 +45,14 @@
                     </div>
 
                     <div class="col-12 col-xl-5 col-xxl-4 auth-cover-right align-items-center justify-content-center">
-                        <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
+                        <div class="m-3 mb-0 bg-transparent shadow-none card rounded-0">
                             <div class="card-body p-sm-5">
                                 <div class="">
                                     <div class="mb-3 text-center">
-                                        <img src="{{ asset('assets') }}/images/ist_logo.png" width="60"
+                                        <img src="{{ asset('assets') }}/images/sub_logo.jpg" width="60"
                                             alt="">
                                     </div>
-                                    <div class="text-center mb-4">
+                                    <div class="mb-4 text-center">
                                         <h5 class="">360 Appraisal System</h5>
                                         <p class="mb-0">Please log in to your account</p>
                                     </div>
@@ -69,7 +70,7 @@
                                                     <input type="password" class="form-control border-end-0"
                                                         id="inputChoosePassword" name="password" required
                                                         placeholder="Enter Password"> <a href="javascript:;"
-                                                        class="input-group-text bg-transparent"><i
+                                                        class="bg-transparent input-group-text"><i
                                                             class="bx bx-hide"></i></a>
                                                 </div>
                                             </div>

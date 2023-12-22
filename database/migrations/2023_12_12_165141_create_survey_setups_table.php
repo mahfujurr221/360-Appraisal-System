@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('survey_setups', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('survey_detail_id')->constrained('survey_details')->onDelete('cascade');
-            $table->foreignId('survey_for_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('survey_detail_id');
+            $table->foreignId('survey_for_id');
             $table->json('survey_by_ids')->nullable();
             $table->foreignId('question_set_id')->constrained('question_sets');
             $table->json('questions')->nullable();

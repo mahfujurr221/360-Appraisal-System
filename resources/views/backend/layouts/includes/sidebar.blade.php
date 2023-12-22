@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper" data-simplebar="true">
     <div class="sidebar-header">
         <div>
-            <img src="{{ asset('assets') }}/images/ist_logo_mini.gif" class="logo-icon" alt="logo icon">
+            <img src="{{ asset('assets') }}/images/sub_logo.jpg" class="logo-icon" alt="logo icon">
         </div>
         <div>
             <h4 class="logo-text">Appraisal</h4>
@@ -114,7 +114,7 @@
                     <div class="menu-title">Reset</div>
                 </a>
             </li>
-        @elseif(auth()->user()->role_id == 3)
+        @elseif(auth()->user()->role_id != 1 && auth()->user()->role_id != 2)
             @php
                 //active survey setup
                 $activeSurveySetup = App\Models\SurveySetup::where('status', 'active')

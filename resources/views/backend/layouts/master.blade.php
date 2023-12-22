@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('assets') }}/images/ist_logo_mini.gif" type="image/gif" />
+    <link rel="icon" href="{{ asset('assets') }}/images/sub_logo.jpg" type="image/gif" />
     <!-- Styles -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
