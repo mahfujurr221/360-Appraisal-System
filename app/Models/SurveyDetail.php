@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class SurveyDetail extends Model
 {
     use HasFactory;
+
+    public function surveySetups()
+    {
+        return $this->hasMany(SurveySetup::class, 'survey_detail_id', 'id');
+    }
 }
