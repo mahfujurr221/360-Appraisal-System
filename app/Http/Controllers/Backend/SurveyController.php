@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
+use App\Models\SurveyDetail;
 use App\Models\SurveyQuestion;
 use App\Models\SurveyResponse;
 use App\Models\SurveyResponseDetails;
@@ -17,17 +18,19 @@ class SurveyController extends Controller
     {
         //survey_by_ids is a json field string in survey_setups table
         $survey = SurveySetup::join('survey_details', 'survey_setups.survey_detail_id', '=', 'survey_details.id')
-            ->where('status', 'active')
-            ->whereJsonContains('survey_by_ids', strval(auth()->user()->id))
-            ->select('survey_setups.*', 'survey_details.title as title', 'survey_details.description as description')
+            ->where('survey_setups.status', 'active')
+            ->whereJsonContains('survey_setups.survey_by_ids', strval(auth()->user()->id))
+            ->select('survey_details.title as title', 'survey_details.description as description','survey_details.id as id')
+            ->groupBy('survey_setups.survey_detail_id')
             ->get();
+        // return response()->json($survey);
         return view('backend.pages.survey.survey-start', compact('survey'));
     }
     // surveyEmployee
     public function surveyEmployee(string $id)
     {
         $surveySetupId = $id;
-        $employees = SurveySetup::with('surveyFor')->where('status', 'active')->where('id', $surveySetupId)->get();
+        $employees = SurveySetup::with('surveyFor')->where('status', 'active')->where('survey_detail_id', $surveySetupId)->get();
         $employees = $employees->pluck('surveyFor');
         return view('backend.pages.survey.survey-employee', compact('employees', 'surveySetupId'));
     }
